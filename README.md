@@ -1,6 +1,8 @@
 Nordic Energy Blockchain Explorer for Energy Case
 =====================================
 
+![Landing Page](img/screenshot1.png)
+
 Development environment
 -----------------------
 
