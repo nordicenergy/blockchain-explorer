@@ -1,24 +1,13 @@
-# blockchain-explorer
+Nordic Energy Blockchain Explorer for Energy Case
+=====================================
 
-## Project setup
-```
-yarn install
-```
+Development environment
+-----------------------
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+start your own node and update `src/config.js`
 
-### Compiles and minifies for production
-```
-yarn build
-```
+`npm i`
 
-### Lints and fixes files
-```
-yarn lint
-```
+`npm run serve`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+`open http://localhost:8080/`

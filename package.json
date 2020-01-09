@@ -1,41 +1,66 @@
 {
   "name": "blockchain-explorer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "VUE_APP_NETWORK=54084 vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.4.4",
-    "vue": "^2.6.10"
+    "moment": "^2.24.0",
+    "number-to-bn": "^1.7.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.2",
+    "web3": "1.0.0-beta.34"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
-    "@vue/cli-service": "^4.1.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "@vue/cli-plugin-babel": "^3.5.1",
+    "@vue/cli-plugin-eslint": "^3.5.1",
+    "@vue/cli-service": "^3.5.1",
+    "eslint": "^5.15.3",
+    "vue-template-compiler": "^2.6.10",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@vue/app"
+    ]
   },
   "eslintConfig": {
     "root": true,
-    "env": {
-      "node": true
-    },
     "extends": [
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "globals": {
+      "$": true,
+      "process": true,
+      "module": true
+    },
     "parserOptions": {
-      "parser": "babel-eslint"
+      "ecmaVersion": 2018
+    },
+    "rules": {
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ]
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
     }
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not ie <= 8"
   ]
 }
