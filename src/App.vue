@@ -4,7 +4,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid top-header">
         <router-link to="/" class="logo">
-          <img src="https://www.lition.io/wp-content/uploads/2018/03/lition-logo-secondary-white@3x.png">
+          <img src="https://www.nordicenergy.io/content/uploads/nordicenergy-logo-secondary-white@3x.png">
         </router-link>
 
         <div class="form-inline">

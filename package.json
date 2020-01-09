@@ -1,5 +1,5 @@
 {
-  "name": "blockchain-explorer",
+  "name": "prod-smart-contract-viewer",
   "version": "1.0.0",
   "private": true,
   "scripts": {

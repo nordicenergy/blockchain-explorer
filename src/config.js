@@ -1,12 +1,12 @@
 export default {
   '54084': {
     name: 'PowerChain Testnet',
-    manager: 'http://40.113.129.13:22004',
-    rpc: 'http://40.113.129.13:22000/',
+    manager: 'https://localhost:22004',
+    rpc: 'https://localhost:22000/',
   },
   '78377': {
     name: 'PowerChain Prod',
-    manager: 'http://40.113.129.13:32004',
-    rpc: 'http://40.113.129.13:32000/',
+    manager: 'http://localhost:32004',
+    rpc: 'http://localhost:32000/',
   },
 };
