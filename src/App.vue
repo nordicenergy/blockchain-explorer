@@ -4,7 +4,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid top-header">
         <router-link to="/" class="logo">
-          <img src="https://www.nordicenergy.io/content/uploads/nordicenergy-logo-secondary-white@3x.png">
+          <img src="https://www.explorer.nordicenergy.io/content/uploads/nordicenergy-logo-secondary-white@3x.png">
         </router-link>
 
         <div class="form-inline">
@@ -233,7 +233,7 @@
   }
 
   div.headerimage {
-    background-image: url('https://www.lition.io/wp-content/uploads/2018/03/180327-den-stage-illusration@3x.png');
+    background-image: url('https://www.explorer.nordicenergy.io/content/uploads/illusration@3x.png');
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 200px;
