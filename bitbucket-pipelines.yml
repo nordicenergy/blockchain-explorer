@@ -1,4 +1,4 @@
-image: node:11.3.0
+image: node:13.0.0
 
 pipelines:
   branches:
@@ -8,15 +8,15 @@ pipelines:
           deployment: production
           script:
             - npm ci
-            - VUE_APP_NETWORK=78377 BASE_URL=/prod-explorer npm run build
-            - docker login bc1.nordicenergy.io:5000 -u $DOCKER_USER -p $DOCKER_PASSWORD
-            - docker build -t prod-smart-contract-viewer .
-            - docker tag prod-smart-contract-viewer bc1.nordicenergy.io:5000/prod-smart-contract-viewer
-            - docker push bc1.nordicenergy.io:5000/prod-smart-contract-viewer
-            - ssh powerchain@bc1.nordicenergy.io "docker pull bc1.nordicenergy.io:5000/prod-smart-contract-viewer"
-            - ssh powerchain@bc1.nordicenergy.io "docker stop prod-smart-contract-viewer || true"
-            - ssh powerchain@bc1.nordicenergy.io "docker rm prod-smart-contract-viewer || true"
-            - ssh powerchain@bc1.nordicenergy.io "docker run --network nginx --network-alias prod-smart-contract-viewer --name prod-smart-contract-viewer -d bc1.nordicenergy.io:5000/prod-smart-contract-viewer"
+            - VUE_APP_NETWORK=78377 BASE_URL=/powerchain-explorer npm run build
+            - docker login explorer.nordicenergy.io:5000 -u $DOCKER_USER -p $DOCKER_PASSWORD
+            - docker build -t powerchain-smart-contract-viewer .
+            - docker tag prod-smart-contract-viewer bc1.nordicenergy.io:5000/powerchain-smart-contract-viewer
+            - docker push explorer.nordicenergy.io:5000/powerchain-smart-contract-viewer
+            - ssh powerchain@explorer.nordicenergy.io "docker pull explorer.nordicenergy.io:5000/powerchain-smart-contract-viewer"
+            - ssh powerchain@explorer.nordicenergy.io "docker stop powerchain-smart-contract-viewer || true"
+            - ssh powerchain@explorer.nordicenergy.io "docker rm powerchain-smart-contract-viewer || true"
+            - ssh powerchain@explorer.nordicenergy.io "docker run --network nginx --network-alias prod-smart-contract-viewer --name powerchain-smart-contract-viewer -d explorer.nordicenergy.io:5000/powerchain-smart-contract-viewer"
     staging:
       - step:
           name: Deploy
@@ -24,14 +24,14 @@ pipelines:
           script:
             - npm ci
             - VUE_APP_NETWORK=54084 BASE_URL=/explorer npm run build
-            - docker login bc1.nordicenergy.io:5000 -u $DOCKER_USER -p $DOCKER_PASSWORD
+            - docker login explorer.nordicenergy.io:5000 -u $DOCKER_USER -p $DOCKER_PASSWORD
             - docker build -t smart-contract-viewer .
-            - docker tag smart-contract-viewer bc1.nordicenergy.io:5000/smart-contract-viewer
-            - docker push bc1.nordicenergy.io:5000/smart-contract-viewer
-            - ssh powerchain@bc1.nordicenergy.io "docker pull bc1.nordicenergy.io:5000/smart-contract-viewer"
-            - ssh powerchain@bc1.nordicenergy.io "docker stop smart-contract-viewer || true"
-            - ssh powerchain@bc1.nordicenergy.io "docker rm smart-contract-viewer || true"
-            - ssh powerchain@bc1.nordicenergy.io "docker run --network nginx --network-alias smart-contract-viewer --name smart-contract-viewer -d bc1.nordicenergy.io:5000/smart-contract-viewer"
+            - docker tag smart-contract-viewer explorer.nordicenergy.io:5000/smart-contract-viewer
+            - docker push explorer.nordicenergy.io:5000/smart-contract-viewer
+            - ssh powerchain@explorer.nordicenergy.io "docker pull exlorer.nordicenergy.io:5000/smart-contract-viewer"
+            - ssh powerchain@explorer.nordicenergy.io "docker stop smart-contract-viewer || true"
+            - ssh powerchain@explorer.nordicenergy.io "docker rm smart-contract-viewer || true"
+            - ssh powerchain@explorer.nordicenergy.io "docker run --network nginx --network-alias smart-contract-viewer --name smart-contract-viewer -d explorer.nordicenergy.io:5000/smart-contract-viewer"
 
 options:
   docker: true
