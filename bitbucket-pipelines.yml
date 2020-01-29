@@ -1,0 +1,37 @@
+image: node:13.7.0
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy
+          deployment: production
+          script:
+            - npm ci
+            - VUE_APP_NETWORK=78377 BASE_URL=/powerchain-blockchain npm run build
+            - docker login blockchain.nordicenergy.io:5000 -u $DOCKER_USER -p $DOCKER_PASSWORD
+            - docker build -t powerchain-smart-contract-viewer .
+            - docker tag prod-smart-contract-viewer blockcahin.nordicenergy.io:5000/powerchain-smart-contract-viewer
+            - docker push blockchain.nordicenergy.io:5000/powerchain-smart-contract-viewer
+            - ssh powerchain@blockchain.nordicenergy.io "docker pull blockchain.nordicenergy.io:5000/powerchain-smart-contract-viewer"
+            - ssh powerchain@blockchain.nordicenergy.io "docker stop powerchain-smart-contract-viewer || true"
+            - ssh powerchain@blockchain.nordicenergy.io "docker rm powerchain-smart-contract-viewer || true"
+            - ssh powerchain@blockchain.nordicenergy.io "docker run --network nginx --network-alias prod-smart-contract-viewer --name powerchain-smart-contract-viewer -d explorer.nordicenergy.io:5000/powerchain-smart-contract-viewer"
+    staging:
+      - step:
+          name: Deploy
+          deployment: staging
+          script:
+            - npm ci
+            - VUE_APP_NETWORK=54084 BASE_URL=/blockchain npm run build
+            - docker login blockchain.nordicenergy.io:5000 -u $DOCKER_USER -p $DOCKER_PASSWORD
+            - docker build -t smart-contract-viewer .
+            - docker tag smart-contract-viewer blockchain.nordicenergy.io:5000/smart-contract-viewer
+            - docker push blockchain.nordicenergy.io:5000/smart-contract-viewer
+            - ssh powerchain@blockchain.nordicenergy.io "docker pull blockchain.nordicenergy.io:5000/smart-contract-viewer"
+            - ssh powerchain@blockchain.nordicenergy.io "docker stop smart-contract-viewer || true"
+            - ssh powerchain@blockchain.nordicenergy.io "docker rm smart-contract-viewer || true"
+            - ssh powerchain@blockchain.nordicenergy.io "docker run --network nginx --network-alias smart-contract-viewer --name smart-contract-viewer -d explorer.nordicenergy.io:5000/smart-contract-viewer"
+
+options:
+  docker: true
