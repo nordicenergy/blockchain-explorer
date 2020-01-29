@@ -1,3 +1,6 @@
+
+!landing page
+
 Nordic Energy Blockchain Explorer for Energy Case
 =====================================
 
