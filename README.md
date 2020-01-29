@@ -1,5 +1,5 @@
 
-!landing page
+<img assets="/screenshot-1.png/" alt="Landing page"/>
 
 Nordic Energy Blockchain Explorer for Energy Case
 =====================================
