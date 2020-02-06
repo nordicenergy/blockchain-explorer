@@ -18,8 +18,6 @@ start your own node and update `src/config.js`
 ## ⭐️ Show your support
 Please ⭐️ this repository if this project helped you!
 
-<a href="https://www.patreon.com/sandoche">[![patreon.png](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/sandoche)</a>
-
 ## Donation
 If you like this project, feel free to donate:
 * Bitcoin:  14GyqCEZXyeythb6B6Vu5DiBCMszFrBsp1
