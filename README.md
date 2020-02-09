@@ -1,5 +1,6 @@
 
-<img src="https://github.com/nordicenergy/blockchain-explorer/content/uploads/screenshot-1.png" width="200px">
+![Screenshot](content/uploads/screenshot-1.png)
+
 
 PowerChain Blockchain Explorer for Energy Case
 =====================================
