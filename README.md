@@ -1,5 +1,6 @@
-Nordic Energy Blockchain Explorer for Energy Case
+PowerChain Blockchain Explorer for Energy Case
 =====================================
+Powered by Nordic Energy
 
 Development environment
 -----------------------
