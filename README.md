@@ -1,10 +1,11 @@
 
-![Screenshot](content/uploads/screenshot-1.png)
-
-
 PowerChain Blockchain Explorer for Energy Case
 =====================================
 Powered by Nordic Energy
+
+
+![Screenshot](content/uploads/screenshot-1.png)
+
 
 
 Development environment
