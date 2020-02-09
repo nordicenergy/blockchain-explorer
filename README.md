@@ -20,13 +20,13 @@ start your own node and update `src/config.js`
 
 
 
-⭐️ Show your support
+# ⭐️ Show your support
 -----------------------
 Please ⭐️ this repository if this project helped you!
 
 
 
-Donation
+#### Donation
 -----------------------
 If you like this project, feel free to donate:
 * Bitcoin:  14GyqCEZXyeythb6B6Vu5DiBCMszFrBsp1
