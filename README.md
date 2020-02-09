@@ -20,7 +20,7 @@ start your own node and update `src/config.js`
 
 
 
-# ⭐️ Show your support
+⭐️ ## Show your support
 -----------------------
 Please ⭐️ this repository if this project helped you!
 
