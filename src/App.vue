@@ -4,7 +4,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid top-header">
         <router-link to="/" class="logo">
-          <img src="https://www.explorer.nordicenergy.io/content/uploads/nordicenergy-logo-secondary-white@3x.png">
+          <img src="https://explorer.nordicenergy.io/content/uploads/powerchain-logo.png">
         </router-link>
 
         <div class="form-inline">
@@ -52,7 +52,8 @@
       <div class="row no_overflow headerimage">
         <div class="col-md-12">
           <div class="container-fluid title-container">
-            <h1><strong>Nordic Energy Blockchain Explorer for Energy Case</strong></h1>
+            <h2><strong>Power</strong>Chain - Blockchain Explorer for Energy Case</h2>
+            <h6>Powered by Nordic Energy</h6>
             <br>
             <div class="container-fluid text-left contact-container">
               <router-view></router-view>
@@ -207,7 +208,7 @@
   }
 
   div.title-container input {
-    color: #2c3e50;
+    color: #333333;
   }
 
   div.no_overflow {
@@ -233,7 +234,7 @@
   }
 
   div.headerimage {
-    background-image: url('https://www.explorer.nordicenergy.io/content/uploads/illusration@3x.png');
+    background-image: url('https://explorer.nordicenergy.io/content/uploads/smartgrid.png');
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 200px;
