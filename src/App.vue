@@ -4,7 +4,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid top-header">
         <router-link to="/" class="logo">
-          <img src="https://explorer.nordicenergy.io/content/uploads/powerchain-logo.png">
+          <img src="https://explorer.nordicenergy.io/content/uploads/powerchain-logo-secondary-white@3x">
         </router-link>
 
         <div class="form-inline">
