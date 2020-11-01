@@ -3,6 +3,7 @@ PowerChain Blockchain Explorer for Energy Case
 =====================================
 Powered by Nordic Energy
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4e2a37e8-c601-41b7-838a-cd19a1c66584/deploy-status)](https://app.netlify.com/sites/nordicenergy-blockchain-explorer/deploys)
 
 ![Screenshot](content/uploads/screenshot-1.png)
 
